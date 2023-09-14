@@ -1,5 +1,8 @@
 import qrcode
-name:input("yor name ? : ")
-PhoneNumber=int(input("yor PhoneNumber ? : "))
-img=qrcode.make(name+" | "+PhoneNumber)
-img.save("yor qrcode.jpg")
+name=input("yor name ? : ")
+number=int(input("yor PhoneNumber ? : "))
+QR=[]
+QR.append(name)
+QR.append(number)
+img=qrcode.make(QR)
+img.save("qrcode.jpg")
